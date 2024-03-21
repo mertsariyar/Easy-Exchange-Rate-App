@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .container {
+      width: 12%;
+      margin: auto;
+    }
+
+    .card-1 {
+      border: 1px solid gray;
+      margin-bottom: 2rem;
+    }
+    .inner-card {
+      padding: 2rem;
+    }
+
+    .input-section, .currency-types {
+      margin-top: 1.5rem;
+    }
+
+    .currency-types select {
+      display: block;
+      width: 100%;
+      margin-top: .5rem;
+      border: none; /* Border'ı kaldırma */
+      border-bottom: 1px solid gray;
+      appearance: none; /* Genel olarak iç border'ı kaldırma */
+      padding: .3rem 0;
+    }
+
+   
+
+    .card-2 {
+      border: 1px solid gray;
+    }
+
+    input {
+      border: none;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.637);
+      padding: .3rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card-1">
+        <div class="inner-card">
+          <div class="header">
+            <h3>Exchange API - Currency App</h3>
+          </div>
+          <div class="input-section">
+            <input type="number" name="amount" id="amount" placeholder="Miktar" style="width: 100%;">
+          </div>
+          <div class="currency-types">
+            <select id="firstCurrency" tabindex="-1">
+              <option selected="">USD</option>
+              <option>EUR</option>
+              <option>JPY</option>
+              <option>BGN</option>
+              <option>CZK</option>
+              <option>DKK</option>
+              <option>GBP</option>          
+              <option>HUF</option>
+              <option>PLN</option>
+              <option>RON</option>
+              <option>SEK</option>
+              <option>CHF</option>
+              <option>ISK</option>
+              <option>NOK</option>          
+              <option>HRK</option>
+              <option>RUB</option>
+              <option>TRY</option>
+              <option>AUD</option>
+              <option>BRL</option>          
+              <option>CAD</option>
+              <option>CNY</option>
+              <option>HKD</option>
+              <option>IDR</option>          
+              <option>ILS</option>
+              <option>INR</option>
+              <option>KRW</option>
+              <option>MXN</option>          
+              <option>MYR</option>
+              <option>NZD</option>
+              <option>PHP</option>
+              <option>SGD</option>
+              <option>THB</option>          
+              <option>ZAR</option>
+            </select>
+            <select id="secCurrency" tabindex="-1">
+              <option selected="">TRY</option>
+              <option>EUR</option>
+              <option>JPY</option>
+              <option>BGN</option>
+              <option>CZK</option>
+              <option>DKK</option>
+              <option>GBP</option>          
+              <option>HUF</option>
+              <option>PLN</option>
+              <option>RON</option>
+              <option>SEK</option>
+              <option>CHF</option>
+              <option>ISK</option>
+              <option>NOK</option>          
+              <option>HRK</option>
+              <option>RUB</option>
+              <option>USD</option>
+              <option>AUD</option>
+              <option>BRL</option>          
+              <option>CAD</option>
+              <option>CNY</option>
+              <option>HKD</option>
+              <option>IDR</option>          
+              <option>ILS</option>
+              <option>INR</option>
+              <option>KRW</option>
+              <option>MXN</option>          
+              <option>MYR</option>
+              <option>NZD</option>
+              <option>PHP</option>
+              <option>SGD</option>
+              <option>THB</option>          
+              <option>ZAR</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="card-2">
+        <div class="inner-card">
+          <div class="header-2">
+            <span class="card-title" id="outputFirst">USD</span>
+            <span>-</span>
+            <span class="card-title" id="outputSec">TRY</span>
+          </div>
+          <div class="result">
+            <input type="text" placeholder="Sonuç" style="margin-top: 2rem; width: 100%;" readonly name="outputResult" id ="lastResult">
+          </div>
+        </div>
+      </div>
+  </div>
+  <script src="ui.js"></script>
+  <script src="currency.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
